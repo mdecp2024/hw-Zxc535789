@@ -233,8 +233,7 @@ print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
    
 # 列印整個串列，反轉順序
 print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
-<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
-<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p></p>
 <p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
 <p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
 <p><span>範例程式: <a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/50097c52f617061e0854bbb0cb36f4ea8dfb9815/w12%2520Q7">感官</a></span></p>
@@ -253,8 +252,81 @@ print(senses)  # 輸出更新後的感官清單
 # 將索引範圍從0到3，步長為2的元素（"eyes", "ears"）改為 ["sight", "hearing"]
 senses[0:3:2] = ["sight", "hearing"]
 print(senses)  # 輸出最終更新後的感官清單</pre>
-<p><span></span></p>
-<p><span></span></p><h3>w13_hw</h3>
+<p><span>範例程式: <a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/87b13981d04787b6eae1299e35c223c386f60aa4/w12%2520Q7%2520%25E8%25A1%258C%25E6%2598%259F">行星</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個行星列表
+planets = ["Mercury", "Mars", "Earth", "Neptune"]
+# 輸出原始行星列表
+print(planets)
+   
+# 將 "Jupiter" 加入列表的末尾
+planets = planets + ["Jupiter"]
+# 輸出更新後的行星列表
+print(planets)
+   
+# 在索引 2 前插入 "Venus"
+# 先取出索引 0 到 1 的元素，然後加上 "Venus" 和索引 2 到 4 的元素
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+# 輸出再次更新的行星列表
+print(planets)
+   
+# 在索引 5 位置後插入 "Uranus" 和 "Saturn"
+# 取出索引 0 到 4 的元素，加上新元素，然後加上索引 5 之後的元素
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+# 輸出最終的行星列表</pre>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/69e06e715b093719746883ea07880f8d6cd193d9/w12%2520Q7%2520%25E6%2588%25BF%25E5%25AD%2590">房子</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+print(house)  # 原始列表
+   
+# 刪除 "dining room"
+del house[1]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+   
+# 刪除 "garden" 和 "balcony"
+del house[4:6]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "terrace"]
+   
+# 刪除 "kitchen", "bedroom", 和 "terrace"
+del house[::2]
+print(house)  # ["living room", "bathoom"]
+   
+# 刪除整個清單
+del house
+try:
+    print(house)  # 此處會觸發 NameError
+except NameError:
+    print("The variable 'house' no longer exists.")</pre>
+<p>第八題:My friends' favorite dishes(<span>我朋友最喜歡的菜</span>)</p>
+<p><span>說明:for ... in range() (循環控制語句)</span></p>
+<p><span>範例程式: <a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/4d42ce9f44a031ff591be26df8f079f45bdce4ad/w12%2520Q8">我朋友最喜歡的菜</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+   
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+   
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+   
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+   
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+   
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+   
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])
+</pre>
+<p></p><h3>w13_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/db3b39ad71234002b22fa8e074db51aa282889a5/%25E5%2585%25A9%25E5%2580%258B%25E6%25AD%25A3%25E6%2596%25B9%25E5%25BD%25A2%25E7%25B4%2585%25E8%2589%25B2%25E6%25A1%2586"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">兩個紅色支架框</span></span></a></p>
 <p><a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/3437d9d79862daa1510da99994b2b4a186cbaba5/%25E5%2585%25A9%25E5%2580%258B%25E6%2596%25B9%25E5%25BD%25A2%25E5%258A%25A0%25E4%25B8%2580%25E8%2597%258D%25E7%25B7%259A"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">兩個方形加藍線</span></span></a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
