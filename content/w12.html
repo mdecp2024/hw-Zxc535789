@@ -211,6 +211,79 @@ todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dis
 print (todays_menu) #列印今日菜單
 todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
 print (todays_menu) #列印今日菜單</pre>
+<p>第六題:Traveling around the world(環遊世界)</p>
+<p><span>說明:</span>List slicing(串列切片)</p>
+<p><span>範例程式: <a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/56d88f66c5d79e5e50f26c2dc3ec4c0f6adccfd7/w12%2520Q6">city</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個名為 cities 的串列，包含五個城市名稱
+cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+   
+# 列印整個串列
+print (cities)  # ['San Diego', 'Prague', 'Cape Town', 'Tokyo', 'Melbourne']
+   
+# 列印索引為 1 的元素
+print (cities[1])  # 'Prague'
+   
+# 列印從索引 1 到 3 的元素（不包含索引 4）
+print (cities[1:4])  # ['Prague', 'Cape Town', 'Tokyo']
+   
+# 列印從索引 1 到 3 的元素，間隔為 2
+print (cities[1:4:2])  # ['Prague', 'Tokyo']
+   
+# 列印從索引 0 到 2 的元素（不包含索引 3）
+print (cities[0:3])  # ['San Diego', 'Prague', 'Cape Town']
+   
+# 列印從開始到索引 2 的元素（不包含索引 3）
+print (cities[:3])  # ['San Diego', 'Prague', 'Cape Town']
+   
+# 列印從索引 2 到 4 的元素（不包含索引 5）
+print (cities[2:5])  # ['Cape Town', 'Tokyo', 'Melbourne']
+   
+# 列印從索引 2 到最後的元素
+print (cities[2:])  # ['Cape Town', 'Tokyo', 'Melbourne']
+   
+# 列印從索引 0 到 4 的元素，每隔 2 個元素
+print (cities[0:5:2])  # ['San Diego', 'Cape Town', 'Melbourne']
+   
+# 列印從頭到尾的元素，每隔 2 個元素
+print (cities[::2])  # ['San Diego', 'Cape Town', 'Melbourne']
+   
+# 列印索引為 4 的元素
+print (cities[4])  # 'Melbourne'
+   
+# 列印最後一個元素（索引 -1）
+print (cities[-1])  # 'Melbourne'
+   
+# 列印從索引 -4 到 -2 的元素（不包含索引 -1）
+print (cities[-4:-1])  # ['Prague', 'Cape Town', 'Tokyo']
+   
+# 列印從索引 3 到 1，反向取值
+print (cities[3:0:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+   
+# 列印從索引 -2 到 -4，反向取值
+print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+   
+# 列印整個串列，反轉順序
+print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
+<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
+<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
+<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p><span>範例程式: <a href="https://mdecp2024.github.io/hw-Zxc535789/content/Brython.html?src=https://gist.githubusercontent.com/Zxc535789/d6bba4afc0746a27de0e75fd6e8a6ed6/raw/50097c52f617061e0854bbb0cb36f4ea8dfb9815/w12%2520Q7">感官</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
+senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print(senses)  # 輸出原始的感官清單
+   
+# 將清單中索引為1的元素從 "nose" 改為 "smell"
+senses[1] = "smell"
+print(senses)  # 輸出更新後的感官清單
+   
+# 將索引範圍為3到5的元素（"tongue", "skin"）改為 ["taste", "touch"]
+senses[3:5] = ["taste", "touch"]
+print(senses)  # 輸出更新後的感官清單
+   
+# 將索引範圍從0到3，步長為2的元素（"eyes", "ears"）改為 ["sight", "hearing"]
+senses[0:3:2] = ["sight", "hearing"]
+print(senses)  # 輸出最終更新後的感官清單</pre>
 <p><span></span></p>
 <p><span></span></p><br />w11_hw << <a href='w11_hw.html'>Previous</a> <a href='w13_hw.html'>Next</a> >> w13_hw</div>
         
